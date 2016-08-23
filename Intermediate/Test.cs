@@ -1,0 +1,7 @@
+namespace Intermediate
+{
+    class Test
+    {
+        
+    }
+}

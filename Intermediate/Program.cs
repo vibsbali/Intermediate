@@ -4,9 +4,7 @@
     {
         static void Main(string[] args)
         {
-            var person = Person.Parse("Vaibhav");
-
-            person.Introduce("Sheebu");
+            var customer = new Customer(1, "Vaibhav");
         }
     }
 }

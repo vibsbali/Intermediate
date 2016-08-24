@@ -5,18 +5,14 @@ namespace Intermediate
     public class Customer
     {
         public int Id;
-        public string Name;
-        public List<Order> Orders;
 
-        public Customer()
-        {
-            Orders = new List<Order>();
-        }
+        public readonly List<Order> Orders;
+        public string Name { get; set; }
 
-
-        public Customer(int id) : this()
+        public Customer(int id)
         {
             Id = id;
+            Orders = new List<Order>();
         }
 
         public Customer(int id, string name) : this(id)

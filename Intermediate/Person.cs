@@ -4,16 +4,18 @@ namespace Intermediate
 {
     public class Person
     {
-        public string Name;
+        public int Id { get; set; }
+        public DateTime BirthDate { get; set; }
 
-        public void Introduce(string to)
+        public int Age
         {
-            Console.WriteLine($"Hi {to}, I am {Name}");
+            get
+            {
+                var timeSpan = DateTime.Today - BirthDate;
+                return timeSpan.Days / 365;
+            }
         }
 
-        public static Person Parse(string str)
-        {
-            return new Person { Name = str };
-        }
+        public string Name { get; set; }
     }
 }
